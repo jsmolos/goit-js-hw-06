@@ -1,6 +1,6 @@
 const nameInput = document.getElementById('name-input');
 const nameOutput = document.getElementById('name-output');
-nameInput.addEventListener('input', updateName);
-function updateName() {
-    nameOutput.textContent = nameInput.value.trim() || 'Anonymous';
-  }
+nameInput.addEventListener('input', function(event) {
+ const inValue = event.target.value;
+    nameOutput.textContent = inValue ? inValue : 'Anonymous';
+  });
